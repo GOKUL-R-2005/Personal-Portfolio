@@ -1,4 +1,10 @@
 
+function sendMail() {
+  window.location.href = "mailto:gokulr20005@gmail.com?subject=This is my subject&body=This is my body";
+  setTimeout(function() {
+    
+  })
+}
 function myMenuFunction(){
   var menuBtn = document.getElementById("myNavMenu");
 
@@ -28,44 +34,34 @@ function headerShadow() {
   }
 }
 var typingEffect = new Typed(".typedText",{
-  strings : ["web Designer","Programmer"],
+  strings : ["WEB DESIGNER","PROGRAMMER"],
   loop : true,
   typeSpeed : 100, 
   backSpeed : 80,
-  backDelay : 2000
 })
-const sr = ScrollReveal({
-      origin: 'top',
-      distance: '80px',
-      duration: 2000,
-      reset: true     
-})
+
 sr.reveal('.featured-text-card',{})
-sr.reveal('.featured-name',{delay: 100})
-sr.reveal('.featured-text-info',{delay: 200})
-sr.reveal('.featured-text-btn',{delay: 200})
-sr.reveal('.social_icons',{delay: 200})
-sr.reveal('.featured-image',{delay: 300})
-sr.reveal('.project-box',{interval: 200})
+sr.reveal('.featured-name')
+sr.reveal('.featured-text-info')
+sr.reveal('.featured-text-btn')
+sr.reveal('.social_icons')
+sr.reveal('.featured-image')
+sr.reveal('.project-box')
 sr.reveal('.top-header',{})
 const srLeft = ScrollReveal({
 origin: 'left',
-distance: '80px',
-duration: 2000,
 reset: true
 })
 
-srLeft.reveal('.about-info',{delay: 100})
-srLeft.reveal('.contact-info',{delay: 100})
+srLeft.reveal('.about-info')
+srLeft.reveal('.contact-info')
 const srRight = ScrollReveal({
 origin: 'right',
-distance: '80px',
-duration: 2000,
 reset: true
 })
 
-srRight.reveal('.skills-box',{delay: 100})
-srRight.reveal('.form-control',{delay: 100})
+srRight.reveal('.skills-box')
+srRight.reveal('.form-control')
 const sections = document.querySelectorAll('section[id]')
 function scrollActive() {
 const scrollY = window.scrollY;
@@ -86,5 +82,20 @@ sections.forEach(current =>{
 })
 }
 
-window.addEventListener('scroll', scrollActive)
+let lastScrollTop = 0;
+const navbar = document.querySelector('nav');
+
+window.addEventListener('scroll', function() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+        // Scrolling down
+        navbar.style.top = "-80px"; // Hide the navbar (adjust this value to match your navbar's height)
+    } else {
+        // Scrolling up
+        navbar.style.top = "0"; // Show the navbar
+    }
+
+    lastScrollTop = scrollTop;
+});
 
