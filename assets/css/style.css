@@ -78,7 +78,7 @@ nav{
     line-height: 90px;
     background: var(--body-color);
     padding-inline: 9vw;
-    transition: .3s;
+    transition: top 0.3s;
     z-index: 100;
 }
 .nav-logo{
@@ -120,14 +120,14 @@ nav{
 .active-link{
     position: relative;
     color: var(--first-color);
-    transition: .3;
+    
 }
 .active-link::after{
     content: '';
     position: absolute;
     left: 50%;
     bottom: -15px;
-    transform: translate(-50%, -50%);
+    
     width: 5px;
     height: 5px;
     background: var(--first-color);
@@ -220,24 +220,19 @@ nav{
     height: 380px;
     border-radius: 55% 45% 55% 45%;
     overflow: hidden;
-    animation: imgFloat 7s ease-in-out infinite;
+    
 }
 .image img{
     width: 380px;
     height: 380px;
     object-fit: cover;
 }
-@keyframes imgFloat {
-    50%{
-        transform: translateY(10px);
-        border-radius: 45% 55% 45% 55%;
-    }
-}
+
 .scroll-btn{
    position: absolute;
    bottom: 0;
    left: 50%;
-   translate: -50%;
+   
    display: flex;
    justify-content: center;
    align-items: center;
@@ -255,7 +250,7 @@ nav{
 }
 
 .section{
-    padding-block: 5em;
+    padding-block: 20px;
 }
 .row{
     display: flex;
@@ -270,7 +265,7 @@ nav{
 
 .top-header{
     text-align: center;
-    margin-bottom: 5em;
+    margin-bottom: 2em;
 }
 .top-header h1{
     font-weight: 600;
@@ -299,7 +294,7 @@ h3{
     box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
     border-radius: 20px;
 }
-.about-info p{
+.-info p{
     text-align: center;
     font-size: 15px;
     color: #777;
@@ -371,7 +366,7 @@ h3{
     background: var(--second-color);
     width: 100%;
     height: 100%;
-    transition: .4s;
+    
     z-index: 1;
 }
 .project-box:hover.project-box::after,
@@ -419,7 +414,7 @@ h3{
 .contact-info:hover.contact-info h2,
 .contact-info:hover.contact-info p,
 .contact-info:hover.contact-info i{
-    color: #777;
+    color: #32d388;
     z-index: 2;
 }
 .form-control{
@@ -527,7 +522,7 @@ footer{
         width: 100%;
         min-height: 450px;
         height: 90vh;
-        transition: .3s;
+        
     }
     .nav_menu_list{
         flex-direction: column;
